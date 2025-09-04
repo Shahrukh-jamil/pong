@@ -1,5 +1,5 @@
 // Set this to your Render WebSocket URL:
-const SERVER_URL = 'wss://YOUR-RENDER-SERVICE.onrender.com';
+const SERVER_URL = 'https://pong-c3l6.onrender.com';
 
 const WORLD = { W: 900, H: 1600 }; // must match server
 const HEARTS_START = 3;
