@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Online Mobile Pong</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Home / Start -->
+    <div id="screen-home" class="screen active">
+      <div class="logo">PONG</div>
+      <div class="card">
+        <label class="label">Your name</label>
+        <input id="nameInput" class="input" type="text" maxlength="16" placeholder="Enter name" />
+        <button id="startBtn" class="btn primary">Start</button>
+      </div>
+      <div class="note">Portrait mode. Touch & drag to play.</div>
+    </div>
+
+    <!-- Finding -->
+    <div id="screen-finding" class="screen">
+      <div class="center">
+        <div class="spinner"></div>
+        <div class="finding-text">Finding player…</div>
+        <button id="cancelFindBtn" class="btn">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Game -->
+    <div id="screen-game" class="screen">
+      <canvas id="gameCanvas"></canvas>
+
+      <!-- HUD -->
+      <div class="hud">
+        <div class="row names">
+          <div id="topName" class="name topName">Top</div>
+          <div id="bottomName" class="name bottomName">Bottom</div>
+        </div>
+        <div class="row hearts">
+          <div id="topHearts" class="hearts">❤️❤️❤️</div>
+          <div id="bottomHearts" class="hearts">❤️❤️❤️</div>
+        </div>
+      </div>
+
+      <!-- Overlays -->
+      <div id="overlay" class="overlay hidden">
+        <div id="overlayContent" class="overlay-content"></div>
+        <div class="overlay-actions" id="overlayActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
